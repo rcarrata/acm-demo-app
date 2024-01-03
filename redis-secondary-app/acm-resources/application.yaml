@@ -3,7 +3,7 @@ apiVersion: app.k8s.io/v1beta1
 kind: Application
 metadata:
   namespace: guestbook
-  name: redis-slave-app
+  name: redis-secondary-app
 spec:
   componentKinds:
     - group: apps.open-cluster-management.io
@@ -14,4 +14,4 @@ spec:
       - key: app
         operator: In
         values:
-          - redis-slave-app
+          - redis-secondary-app

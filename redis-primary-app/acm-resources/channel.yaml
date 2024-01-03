@@ -2,8 +2,8 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
-  name: redis-slave-app-latest
+  name: redis-primary-app-latest
   namespace: guestbook
 spec:
   type: GitHub
-  pathname: https://github.com/rcarrata/acm-demo-app.git
+  pathname: https://github.com/rh-mobb/acm-demo-app.git

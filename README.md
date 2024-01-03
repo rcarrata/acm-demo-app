@@ -8,14 +8,14 @@ All of this commands needs to be performed in the ACM Hub cluster to deploy thro
 oc apply -k guestbook-app/acm-resources
 ```
 
-* Deploy the Redis Master App in Cluster Managed 1
+* Deploy the Redis primary App in Cluster Managed 1
 
 ```
-oc apply -k redis-master-app/acm-resources
+oc apply -k redis-primary-app/acm-resources
 ```
 
-* Deploy the Redis Slave App in Cluster Managed 2
+* Deploy the Redis secondary App in Cluster Managed 2
 
 ```
-oc apply -k redis-slave-app/acm-resources
+oc apply -k redis-secondary-app/acm-resources
 ```

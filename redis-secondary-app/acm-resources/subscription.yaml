@@ -1,0 +1,17 @@
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  namespace: guestbook
+  name: redis-secondary-app-subscription-1
+  annotations:
+    apps.open-cluster-management.io/git-branch: main
+    apps.open-cluster-management.io/git-path: redis-secondary-app/redis-secondary
+  labels:
+    app: redis-secondary-app
+spec:
+  channel: guestbook/redis-secondary-app-latest
+  placement:
+    placementRef:
+      name: redis-secondary-app-placement-1
+      kind: PlacementRule

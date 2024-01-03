@@ -10,3 +10,5 @@ spec:
     kind: Service
     name: frontend
     weight: 100
+  tls:
+    termination: edge

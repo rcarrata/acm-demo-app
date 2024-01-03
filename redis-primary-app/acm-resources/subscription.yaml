@@ -3,15 +3,15 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
 metadata:
   namespace: guestbook
-  name: redis-master-app-subscription-1
+  name: redis-primary-app-subscription-1
   annotations:
     apps.open-cluster-management.io/git-branch: main
-    apps.open-cluster-management.io/git-path: redis-master-app/redis-master
+    apps.open-cluster-management.io/git-path: redis-primary-app/redis-primary
   labels:
-    app: redis-master-app
+    app: redis-primary-app
 spec:
-  channel: guestbook/redis-slave-app-latest
+  channel: guestbook/redis-secondary-app-latest
   placement:
     placementRef:
-      name: redis-master-app-placement-1
+      name: redis-primary-app-placement-1
       kind: PlacementRule
